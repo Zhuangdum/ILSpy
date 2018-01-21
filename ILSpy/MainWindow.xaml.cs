@@ -54,7 +54,13 @@ namespace ICSharpCode.ILSpy
 		internal AssemblyListManager assemblyListManager;
 		AssemblyList assemblyList;
 		AssemblyListTreeNode assemblyListTreeNode;
-		
+
+#if DEBUG
+		public const bool IsDebug = true;
+#else
+		public const bool IsDebug = false;
+#endif
+
 		[Import]
 		DecompilerTextView decompilerTextView = null;
 		

@@ -64,6 +64,7 @@ namespace ICSharpCode.ILSpy.Options
 			s.UsingDeclarations = (bool?)e.Attribute("usingDeclarations") ?? s.UsingDeclarations;
 			s.FullyQualifyAmbiguousTypeNames = (bool?)e.Attribute("fullyQualifyAmbiguousTypeNames") ?? s.FullyQualifyAmbiguousTypeNames;
 			s.AlwaysUseBraces = (bool?)e.Attribute("alwaysUseBraces") ?? s.AlwaysUseBraces;
+			s.DecompileMemberBodies = (bool?)e.Attribute("decompileMemberBodies") ?? s.DecompileMemberBodies;
 			return s;
 		}
 		
@@ -86,6 +87,7 @@ namespace ICSharpCode.ILSpy.Options
 			section.SetAttributeValue("usingDeclarations", s.UsingDeclarations);
 			section.SetAttributeValue("fullyQualifyAmbiguousTypeNames", s.FullyQualifyAmbiguousTypeNames);
 			section.SetAttributeValue("alwaysUseBraces", s.AlwaysUseBraces);
+			section.SetAttributeValue("decompileMemberBodies", s.DecompileMemberBodies);
 
 			XElement existingElement = root.Element("DecompilerSettings");
 			if (existingElement != null)
